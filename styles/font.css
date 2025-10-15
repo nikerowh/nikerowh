@@ -1,0 +1,38 @@
+/* regular */
+@font-face {
+  font-family: "Terminalia Regular", monospace;
+  src:
+       url("/styles/fonts/Terminalia-Regular.otf") format("otf"),
+       url("/styles/fonts/Terminalia-Regular.ttf") format("ttf"),
+       url("/styles/fonts/Terminalia-Regular.woff") format("woff"),
+       url("/styles/fonts/Terminalia-Regular.woff2") format("woff2");
+}
+p {
+  font-family: "Terminalia Regular", monospace;
+}
+
+/* light */
+@font-face {
+  font-family: "Terminalia Light", monospace;
+  src:
+       url("/styles/fonts/Terminalia-Light.otf") format("otf"),
+       url("/styles/fonts/Terminalia-Light.ttf") format("ttf"),
+       url("/styles/fonts/Terminalia-Light.woff") format("woff"),
+       url("/styles/fonts/Terminalia-Light.woff2") format("woff2");
+}
+l {
+  font-family: "Terminalia Light", monospace;
+}
+
+/* bold */
+@font-face {
+  font-family: "Terminalia Bold", monospace;
+  src:
+       url("/styles/fonts/Terminalia-Bold.otf") format("otf"),
+       url("/styles/fonts/Terminalia-Bold.ttf") format("ttf"),
+       url("/styles/fonts/Terminalia-Bold.woff") format("woff"),
+       url("/styles/fonts/Terminalia-Bold.woff2") format("woff2");
+}
+h1, h2, h3, h4, h5, h6, b {
+    font-family: "Terminalia Bold", monospace;
+}
