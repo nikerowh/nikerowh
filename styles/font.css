@@ -1,4 +1,3 @@
-/* regular */
 @font-face {
   font-family: "Terminalia Regular", monospace;
   src:
@@ -11,7 +10,6 @@ p {
   font-family: "Terminalia Regular", monospace;
 }
 
-/* light */
 @font-face {
   font-family: "Terminalia Light", monospace;
   src:
@@ -24,7 +22,6 @@ l {
   font-family: "Terminalia Light", monospace;
 }
 
-/* bold */
 @font-face {
   font-family: "Terminalia Bold", monospace;
   src:
