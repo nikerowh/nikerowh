@@ -36,6 +36,12 @@ html {
     scrollbar-color: #FCA311 #14213D;  /* ползунок и дорожка */
 }
 
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
 /* Сброс базовых отступов */
 * {
     margin: 0;
