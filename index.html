@@ -1,20 +1,81 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/nikerowh/styles/font.css">
     <title>nikerowh</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>H</h1>
-    <h2>E</h2>
-    <h3>L</h3>
-    <h4>L</h4>
-    <h5>O</h5>
-    <h6>nikerowh</h6>
-    <p>it is site</p>
-    <b>it is bold site</b>
-    <l>it is light site</l>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__title">nikerowh</h1>
+            <p class="header__slogan">Offline-инструменты для жизни и разработки</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <div class="about-wrapper">
+            <section class="about">
+            <h2 class="about__title">О проекте</h2>
+            <p class="about__text">
+                Этот сайт — проводник в мир полностью автономного программного обеспечения.  
+                Здесь собраны инструменты для жизни и разработки в условиях ограничений:  
+                офлайн-установщики, криптокошельки, FTP-серверы, дизайн-редакторы,  
+                аварийные ОС на флешках и многое другое.  
+                Всё — без интернета, без слежки, без ограничений.
+            </p>
+            </section>
+        </div>
+        
+
+        <!-- НОВЫЙ БЛОК -->
+    <section class="how-to-get">
+        <h2 class="how-to-get__title">Как получить ПО</h2>
+        <p class="how-to-get__text">
+            Всё программное обеспечение доступно в виде установочных файлов, 
+            которые можно скачать заранее и сохранить на флешку или внешний диск.
+            Вы можете забрать любой нужный архив с программамой:
+        </p>
+        <ul class="how-to-get__list">
+            <li class="how-to-get__item">Через библиотеку программ на сайте</li>
+            <li class="how-to-get__item">Через FTP-сервер (о раздаче будет уведомление)</li>
+        </ul>
+        <p class="how-to-get__note">
+            * Все программы распространяются бесплатно и полностью автономны.
+        </p>
+    </section>
+
+    <!-- НОВЫЙ БЛОК: ПОДДЕРЖКА ПРОЕКТА -->
+    <section class="support">
+        <h2 class="support__title">Поддержка проекта</h2>
+        <p class="support__text">
+            Проект существует исключительно на энтузиазме. Вы можете помочь:
+        </p>
+        
+        <div class="support__options">
+            <div class="support__option">
+                <h3 class="support__option-title">📚 Контент</h3>
+                <p class="support__option-text">Дополнить памятку своими инструкциями или полезными программами</p>
+            </div>
+            <div class="support__option">
+                <h3 class="support__option-title">🔧 Тестирование</h3>
+                <p class="support__option-text">Проверить работу софта на разном железе и в разных условиях</p>
+            </div>
+            <div class="support__option">
+                <h3 class="support__option-title">💬 Помощь новичкам</h3>
+                <p class="support__option-text">Ответить на вопросы в чате, поделиться опытом</p>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <img src="images/contact-icon.png" alt="контакты" class="footer__icon">
+            <a href="https://t.me/nikerowh_project" class="footer__telegram">@nikerowh_project</a>
+            <!-- <span class="footer__separator">|</span> -->
+        </div>
+    </footer>
 </body>
 </html>

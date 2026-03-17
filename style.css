@@ -1,0 +1,423 @@
+/* Подключение локального шрифта */
+@font-face {
+    font-family: 'vaganov';
+    src:
+        url('fonts/vaganov/VaganovSPDemo-Bold.woff2') format('woff2'),
+        url('fonts/vaganov/VaganovSPDemo-Bold.woff') format('woff');
+    font-display: swap; /* Показывает текст сразу, без задержки */
+}
+
+@font-face {
+    font-family: 'snowstorm';
+    src:
+        url('fonts/snowstorm/Snowstorm.woff2') format('woff2'),
+        url('fonts/snowstorm/Snowstorm.woff') format('woff');
+    font-display: swap; /* Показывает текст сразу, без задержки */
+}
+
+/* ===== СТИЛИ СКРОЛЛБАРА ===== */
+
+/* Для Chrome, Safari, Edge, Opera */
+::-webkit-scrollbar {
+    width: 10px;                /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #14213D;        /* Цвет фона дорожки (светло-серый) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FCA311;         /* Цвет ползунка (ваш фирменный светло-голубой) */
+}
+
+/* Для Firefox */
+html {
+    scrollbar-width: auto;
+    scrollbar-color: #FCA311 #14213D;  /* ползунок и дорожка */
+}
+
+/* Сброс базовых отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для header на весь экран */
+.header {
+    height: 100vh;
+    width: 100%;
+    
+    /* Центрирование содержимого */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Цвет фона */
+    background-color: #14213D;
+}
+
+/* Контейнер для заголовка и слогана */
+.header__content {
+    text-align: center; /* Выравнивание текста по центру */
+    color: #ffffff;     /* Цвет текста для всего блока */
+}
+
+/* Стили для заголовка */
+.header__title {
+    font-family: 'vaganov', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FCA311; /* Белый */
+    
+    /* Небольшой отступ снизу */
+    margin-bottom: 1rem;
+}
+
+/* Стили для слогана */
+.header__slogan {
+    font-family: 'snowstorm'; /* Другой шрифт */
+    font-size: 1.5rem;                 /* Меньший размер */
+    font-weight: 400;                   /* Обычный, не жирный */
+    letter-spacing: 0.05em;              /* Немного разреженный */
+    color: #E5E5E5;                     /* Другой цвет (светло-голубой) */
+}
+
+/* ----- MAIN (КОНТЕНТ ПОСЛЕ ПРОКРУТКИ) ----- */
+.main {
+    width: 100%;
+    background-color: #000000;   /* Белый фон для читаемости */
+}
+
+/* ----- БЛОК "О ПРОЕКТЕ" ----- */
+.about-wrapper {
+    background-color: #000000;  /* Фон, который будет виден за margin */
+    padding: 1px 0;              /* Чтобы margin не схлопывался (важно!) */
+}
+
+.about {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    
+    /* Фон */
+    background-color: #14213D;
+    
+    /* Скругление */
+    border-radius: 16px;
+    
+    font-family: 'snowstorm', sans-serif;
+    color: #E5E5E5;
+    line-height: 1.6;
+}
+
+.about__title {
+    font-family: 'vaganov';
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #FCA311;
+}
+
+.about__text {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* ===== БЛОК "КАК ПОЛУЧИТЬ ПО" ===== */
+.how-to-get {
+    max-width: 800px;
+    margin: 0 auto;              /* Центрирование */
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    
+    /* Фон — чуть плотнее, чем у первого блока */
+    background-color: #14213D;
+    
+    /* Скругление — слева, симметрично первому блоку */
+    border-radius: 16px;
+    
+    font-family: 'snowstorm', sans-serif;
+    color: #E5E5E5;
+    line-height: 1.6;
+}
+
+/* Заголовок блока */
+.how-to-get__title {
+    font-family: 'vaganov';
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #FCA311;
+}
+
+/* Текст */
+.how-to-get__text {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Список способов получения */
+.how-to-get__list {
+    list-style: none;           /* Убираем стандартные маркеры */
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.how-to-get__item {
+    font-size: 1.1rem;
+    padding: 0.75rem 0 0.75rem 2rem;
+    position: relative;
+}
+
+/* Кастомный маркер для пунктов списка */
+.how-to-get__item::before {
+    content: "►";               /* Символ-маркер */
+    position: absolute;
+    left: 0;
+    color: #FCA311;             /* Цвет слогана */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Последний пункт без разделителя */
+.how-to-get__item:last-child {
+    border-bottom: none;
+}
+
+/* Примечание (звездочка) */
+.how-to-get__note {
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    font-style: italic;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+/* ===== БЛОК "ПОДДЕРЖКА ПРОЕКТА" ===== */
+.support {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+
+    /* Фон — такой же, как у первого блока, для мягкости */
+    background-color: #14213D;
+    
+    /* Скругление — сверху, чтобы не конфликтовать с акцентом */
+    border-radius: 16px;
+    
+    font-family: 'snowstorm', sans-serif;
+    color: #E5E5E5;
+    line-height: 1.6;
+}
+
+/* Заголовок блока */
+.support__title {
+    font-family: 'vaganov';
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #FCA311;
+}
+
+/* Текст-вступление */
+.support__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* Сетка для вариантов поддержки */
+.support__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Карточка варианта */
+.support__option {
+    background-color: #000000;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    border: 4px solid #FCA311;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support__option:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px #FCA311;
+    border-color: #FCA311;
+}
+
+.support__option-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #FFFFFF;
+}
+
+.support__option-text {
+    font-size: 0.95rem;
+    color: #E5E5E5;
+    margin: 0;
+}
+
+/* ===== ПОДВАЛ (FOOTER) ===== */
+.footer {
+    width: 100%;
+    background-color: #000000;   /* Тёмный фон, как у header */
+    color: #FCA311;
+    padding: 1.5rem 1rem;
+    font-family: 'snowstorm', sans-serif;
+    font-size: 1rem;
+}
+
+/* Контейнер для выравнивания по центру */
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;          /* на случай узкого экрана */
+    align-items: center;
+    justify-content: center;  /* всё по центру */
+    gap: 0.75rem 1.5rem;      /* отступы между элементами */
+}
+
+/* Иконка */
+.footer__icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Разделитель */
+.footer__separator {
+    color: #E5E5E5;           /* цвет слогана */
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+/* Контакты */
+.footer__email,
+.footer__telegram,
+.footer__phone {
+    color: #FCA311;
+    white-space: nowrap;      /* чтобы не переносились */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__email:hover,
+.footer__telegram:hover,
+.footer__phone:hover {
+    color: #FFFFFF;           /* при наведении — цвет слогана */
+    cursor: pointer;          /* или pointer, если хотите сделать ссылками */
+}
+
+/* ----- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ ----- */
+@media (max-width: 768px) {
+    .header__title {
+        font-size: 3rem;
+    }
+
+    .header__slogan {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        padding: 3rem 1.2rem;
+    }
+
+    .about__title {
+        font-size: 2rem;
+    }
+
+    .about__text {
+        font-size: 1rem;
+    }
+
+    /* Добавить для нового блока */
+    .how-to-get {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        border-radius: 12px 0 0 12px;
+    }
+    
+    .how-to-get__title {
+        font-size: 2rem;
+    }
+    
+    .how-to-get__text,
+    .how-to-get__item {
+        font-size: 1rem;
+    }
+    
+    .how-to-get__item {
+        padding: 0.5rem 0 0.5rem 1.8rem;
+    }
+
+    .support {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .support__title {
+        font-size: 2rem;
+    }
+    
+    .support__text {
+        font-size: 1rem;
+    }
+    
+    .support__options {
+        grid-template-columns: 1fr;  /* Карточки друг под другом */
+        gap: 1rem;
+    }
+    
+    .support__option {
+        padding: 1.2rem;
+    }
+    
+    .support__option-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 2rem;
+    }
+
+    .header__slogan {
+        font-size: 1rem;
+    }
+
+    .how-to-get__title {
+        font-size: 1.8rem;
+    }
+
+    .support__title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer__content {
+        flex-direction: column;  /* на телефоне всё в колонку */
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .footer__separator {
+        display: none;            /* разделители убираем */
+    }
+
+    .footer__icon {
+        margin-bottom: 0.25rem;
+    }
+}
