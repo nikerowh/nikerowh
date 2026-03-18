@@ -23,7 +23,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #14213D;        /* Цвет фона дорожки (светло-серый) */
+    background: #3D5A80;        /* Цвет фона дорожки (светло-серый) */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -33,11 +33,11 @@
 /* Для Firefox */
 html {
     scrollbar-width: auto;
-    scrollbar-color: #FCA311 #14213D;  /* ползунок и дорожка */
+    scrollbar-color: #FCA311 #3D5A80;  /* ползунок и дорожка */
 }
 
 body {
-    background-color: #000000;
+    background-color: #293241;
     margin: 0;
     padding: 0;
 }
@@ -60,7 +60,7 @@ body {
     align-items: center;
     
     /* Цвет фона */
-    background-color: #14213D;
+    background-color: #3D5A80;
 }
 
 /* Контейнер для заголовка и слогана */
@@ -95,12 +95,12 @@ body {
 /* ----- MAIN (КОНТЕНТ ПОСЛЕ ПРОКРУТКИ) ----- */
 .main {
     width: 100%;
-    background-color: #000000;   /* Белый фон для читаемости */
+    background-color: #293241;   /* Белый фон для читаемости */
 }
 
 /* ----- БЛОК "О ПРОЕКТЕ" ----- */
 .about-wrapper {
-    background-color: #000000;  /* Фон, который будет виден за margin */
+    background-color: #293241;  /* Фон, который будет виден за margin */
     padding: 1px 0;              /* Чтобы margin не схлопывался (важно!) */
 }
 
@@ -110,7 +110,7 @@ body {
     padding: 2.5rem;
     
     /* Фон */
-    background-color: #14213D;
+    background-color: #3D5A80;
     
     /* Скругление */
     border-radius: 16px;
@@ -141,7 +141,7 @@ body {
     margin-bottom: 3rem;
     
     /* Фон — чуть плотнее, чем у первого блока */
-    background-color: #14213D;
+    background-color: #3D5A80;
     
     /* Скругление — слева, симметрично первому блоку */
     border-radius: 16px;
@@ -211,7 +211,7 @@ body {
     padding: 2.5rem;
     
     /* Фон — такой же, как у первого блока, для мягкости */
-    background-color: #14213D;
+    background-color: #3D5A80;
     
     /* Скругление — сверху, чтобы не конфликтовать с акцентом */
     border-radius: 16px;
@@ -247,7 +247,7 @@ body {
 
 /* Карточка варианта */
 .support__option {
-    background-color: #000000;
+    background-color: #293241;
     padding: 1.5rem 1rem;
     border-radius: 16px;
     border: 4px solid #FCA311;
@@ -276,7 +276,7 @@ body {
 /* ===== ПОДВАЛ (FOOTER) ===== */
 .footer {
     width: 100%;
-    background-color: #000000;   /* Тёмный фон, как у header */
+    background-color: #293241;   /* Тёмный фон, как у header */
     color: #FCA311;
     padding: 1.5rem 1rem;
     font-family: 'snowstorm', sans-serif;
@@ -425,5 +425,169 @@ body {
 
     .footer__icon {
         margin-bottom: 0.25rem;
+    }
+}
+
+/* ===== СТРАНИЦА БИБЛИОТЕКИ ===== */
+
+/* Уменьшенный header для внутренних страниц */
+.header--small {
+    height: 40vh;  /* Меньше, чем на главной */
+    min-height: 300px;
+}
+
+/* Контейнер для всей библиотеки */
+.library-page {
+    padding: 3rem 1rem;
+    background-color: #293241;
+}
+
+/* Категория */
+.category {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+.category:last-child {
+    margin-bottom: 0;
+}
+
+.category__title {
+    font-family: 'vaganov', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FCA311;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #FCA311;
+    display: inline-block;
+}
+
+/* Сетка для карточек */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Карточка программы */
+.card {
+    background-color: #3D5A80;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 4px solid #FCA311;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px #FCA311;
+    border-color: #FCA311;
+}
+
+.card__title {
+    font-family: 'snowstorm', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FCA311;
+    margin-bottom: 0.75rem;
+}
+
+.card__description {
+    font-family: 'snowstorm';
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #E5E5E5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;  /* Описание занимает всё свободное место */
+}
+
+.card__screenshots {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.card__screenshot {
+    width: calc(33.33% - 0.5rem);
+    aspect-ratio: 16 / 9;  /* Соотношение сторон */
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #293241;
+}
+
+.card__download {
+    font-family: 'snowstorm';
+    display: inline-block;
+    background-color: #FCA311;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;  /* Кнопка не растягивается */
+}
+
+.card__download:hover {
+    background-color: #FFFFFF;
+    color: #293241;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .header--small {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .header--small .header__title {
+        font-size: 2.5rem;
+    }
+    
+    .header--small .header__slogan {
+        font-size: 1.2rem;
+    }
+    
+    .category__title {
+        font-size: 1.8rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;  /* Одна карточка в ряд */
+    }
+    
+    .card__screenshots {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header--small .header__title {
+        font-size: 2rem;
+    }
+    
+    .header--small .header__slogan {
+        font-size: 1rem;
+    }
+    
+    .category__title {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.2rem;
+    }
+    
+    .card__title {
+        font-size: 1.3rem;
     }
 }
