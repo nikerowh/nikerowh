@@ -510,6 +510,7 @@ body {
     gap: 0.75rem;
     margin-bottom: 1.5rem;
     justify-content: space-between;
+    border-radius: 16px;
 }
 
 .card__screenshot {
